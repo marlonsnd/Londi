@@ -23,3 +23,12 @@
 hs_err_pid*
 /LondiUtil/nbproject/private/
 /SmartCryptosEJB/nbproject/private/
+/BinanceAPI/nbproject/private/
+/BinanceAPI/build/
+/BinanceAPI/dist/
+/SmartCryptosWEB/nbproject/private/
+/SmartCryptosWEB/build/
+/SmartCryptosEJB/build/
+/LondiUtil/dist/
+/LondiUtil/build/
+/SmartCryptosEJB/dist/

@@ -17,9 +17,10 @@ public class DataCliente {
     
     /**
      * campos
-     * nome
-     * email
-     * dataNascimento
+     * string nome
+     * string email
+     * string senha
+     * date dataNascimento
      * List DataClienteTelefone
      */
 

@@ -3,7 +3,7 @@
  * Copyright (c) MACLE Sistemas LTDA.
  * Criado em 07 de fevereiro de 2023 - 12:41:52
  * Projeto ProjetosLondi
- * @author MÃ¡rlon Schoenardie
+ * @author Márlon Schoenardie
  */
 package com.londi.util;
 
@@ -16,7 +16,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Classe utilitÃ¡ria para conversÃµes de tipos
+ * Classe utilitária para conversões de tipos
  */
 public class Parser {
     private static final DecimalFormat FMT_VALOR = new DecimalFormat("#,###,##0.00");
@@ -76,6 +76,7 @@ public class Parser {
      * @param date string com a data
      * @param format formado ex "dd/MM/yyyy"
      * @return Date
+     * @throws java.text.ParseException
      * @see java.util.Date
      */
     public static Date strToDate(String date, final String format) throws ParseException {
@@ -113,6 +114,7 @@ public class Parser {
      * Retorna o OBJ de data conforme string recebida reconhece apenas em dois formatos "dd/mm/aaaa" ou "aaaa-mm-dd"
      * @param date string formatada com a data
      * @return Date
+     * @throws java.text.ParseException
      */
     public static Date strToDate(String date) throws ParseException {
         if (date != null && ! "".equals(date.trim()) && ! "undefined".equalsIgnoreCase(date) && ! "null".equalsIgnoreCase(date)) {
@@ -127,7 +129,7 @@ public class Parser {
     }
 
     /**
-     * Tenta converter String para Date senÃ¯Â¿Â½o devolve data default
+     * Tenta converter String para Date senão devolve data default
      *
      * @param date string com a data
      * @param def data padrÃ£o a ser devolvida se o parse falhar
@@ -141,17 +143,17 @@ public class Parser {
             } else {
                 return def;
             }
-        } catch (Throwable e) {
+        } catch (ParseException e) {
             return def;
         }
     }
 
     /**
-     * Tenta converter String para Date senÃ¯Â¿Â½o devolve data default
+     * Tenta converter String para Date senão devolve data default
      *
      * @param date string com a data
      * @param format string com o pattern estilo "dd/MM/yy"
-     * @param def data padrÃ£o a ser devolvida se o parse falhar
+     * @param def data padrã a ser devolvida se o parse falhar
      * @return Date
      * @see java.util.Date
      */
@@ -162,7 +164,7 @@ public class Parser {
             } else {
                 return def;
             }
-        } catch (Throwable e) {
+        } catch (ParseException e) {
             return def;
         }
     }
@@ -172,9 +174,9 @@ public class Parser {
      *
      * @param hora string com a hora
      * @return Date
+     * @throws java.text.ParseException
      */
-    public static Date strToTime(final String hora)
-            throws ParseException {
+    public static Date strToTime(final String hora) throws ParseException {
         return strToDate(hora, "HH:mm:ss");
     }
 
@@ -183,6 +185,7 @@ public class Parser {
      *
      * @param dataHora string com a hora e hora
      * @return Date
+     * @throws java.text.ParseException
      */
     public static Date strToDateTime(final String dataHora) throws ParseException {
         if (dataHora.contains("-")) {
@@ -284,7 +287,7 @@ public class Parser {
     }
 
     /**
-     * formataÃ§Ã£o para valores em geral (separador de milhar, 2 casas decimais)
+     * formatação para valores em geral (separador de milhar, 2 casas decimais)
      * @param number numero a ser formatado
      * @return String formatada
      */
@@ -297,7 +300,7 @@ public class Parser {
     }
 
     /**
-     * formataÃ§Ã£o para quantidade (casas decimais opcionais, de 0 a 2)
+     * formatação para quantidade (casas decimais opcionais, de 0 a 2)
      * @param number numero a ser formatado
      * @return String formatada
      */
@@ -658,7 +661,7 @@ public class Parser {
     }
 
     /**
-     * Retorna se o E-mail informado Ã© um E-mail valido
+     * Retorna se o E-mail informado é um E-mail valido
      *
      * @param email email a ser validado
      * @return boolean isEmailValido

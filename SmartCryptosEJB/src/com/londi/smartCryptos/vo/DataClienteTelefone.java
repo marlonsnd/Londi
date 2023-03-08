@@ -21,6 +21,7 @@ public class DataClienteTelefone {
      * boolean confirmado
      * string codConfirmacao
      * string ddi
+     * boolean ativo
      */
 
 }

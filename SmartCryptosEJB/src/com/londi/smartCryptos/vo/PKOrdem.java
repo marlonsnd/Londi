@@ -1,7 +1,7 @@
 /*
- * PKCliente.java
+ * PKOperacao.java
  * Copyright (c) LONDI.
- * Criado em 07/03/2023 - 18:01:25
+ * Criado em 08/03/2023 - 00:44:06
  * @author Márlon Schoenardie
  */
 
@@ -11,8 +11,7 @@ package com.londi.smartCryptos.vo;
  *
  * @author Márlon Schoenardie
  */
-public class PKCliente {
-    
-    //long codCliente
+public class PKOrdem {
 
+    //long codOperacao
 }
