@@ -3,7 +3,7 @@
  * Copyright (c) MACLE Sistemas LTDA.
  * Criado em 07 de fevereiro de 2023 - 12:51:28
  * Projeto ProjetosLondi
- * @author MÃ¡rlon Schoenardie
+ * @author Márlon Schoenardie
  */
 package com.londi.util;
 
@@ -18,7 +18,7 @@ import java.time.ZoneId;
 import java.util.*;
 
 /**
- * Classe utilitaria para manipulaÃ§Ã£o de datas
+ * Classe utilitaria para manipulação de datas
  */
 public abstract class DateUtil {
 
@@ -169,7 +169,7 @@ public abstract class DateUtil {
         }
         Date aux = result;
         int currSemana = getWeekOfYear(aux);
-        // incrementa aux atÃ© o primeiro dia da semana
+        // incrementa aux até o primeiro dia da semana
         while ((currSemana < semana && extractYear(aux) == ano) || currSemana == semana) {
             result = aux;
             aux = incDay(aux, 1);
@@ -301,7 +301,7 @@ public abstract class DateUtil {
     }
 
     /**
-     * Retorna se Ã© a data padrÃ£o 01/01/1900 ou *** NULL
+     * Retorna se é a data padrão 01/01/1900 ou *** NULL
      *
      ***
      * @param data a ser testada
@@ -346,7 +346,7 @@ public abstract class DateUtil {
     }
 
     /**
-     * Incrementa nÃºmero de minutos na data
+     * Incrementa número de minutos na data
      * @param date
      * @param minutes
      * @return
@@ -419,7 +419,7 @@ public abstract class DateUtil {
     }
 
     /**
-     * Retorna se time Ã© igual a 00:00:00, hora zero (meia noite)
+     * Retorna se time é igual a 00:00:00, hora zero (meia noite)
      *
      * @param time
      * @return TRUE para meia noite
@@ -497,7 +497,7 @@ public abstract class DateUtil {
     }
 
     /**
-     * Extrai o mÃªs da mÃªs
+     * Extrai o mês da data
      *
      * @param data .
      * @return int
@@ -575,7 +575,7 @@ public abstract class DateUtil {
     }
 
     /**
-     * Retorna o dia da semana onde o 1 Ã© o domingo, 2 a segunda, .. e 7 o
+     * Retorna o dia da semana onde o 1 é o domingo, 2 a segunda, .. e 7 o
      * sabado
      *
      * @param data .
@@ -689,7 +689,7 @@ public abstract class DateUtil {
     }
 
     /**
-     * formata um perÃ­odo para visualizaÃ§Ã£o reduzida quando possÃ­vel ex: mesmo
+     * formata um período para visualização reduzida quando possÃ­vel ex: mesmo
      * mÃªs/ano: 01-31/01/2006 - mesmo ano: 01/01-31/12/2006
      *
      * @param dtIni
