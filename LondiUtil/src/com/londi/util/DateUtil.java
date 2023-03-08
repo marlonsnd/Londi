@@ -722,7 +722,7 @@ public abstract class DateUtil {
     }
 
     /**
-     * Retorna o número de dias entre datas para fins de evento (ex:
+     * Retorna o n�mero de dias entre datas para fins de evento (ex:
      * aniversário)
      *
      * @param dataEvento data do evento
